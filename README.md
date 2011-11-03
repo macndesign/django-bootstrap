@@ -1,25 +1,29 @@
-**Django Bootstrap**
+Django Bootstrap
+================
 
 Django class-based views ready to work with Twitter's Bootstrap toolkit, designed to kickstart development of webapps and sites.
 
-**Requirements**
+Requirements
+------------
 
 * Django 1.3+
 * Django 1.4+ (If you want to use SessionWizardView)
 
-**Installation**
+Installation
+------------
 
 Install through pip (or manually place it on your `PYTHON_PATH`).
 
     pip install git+http://github.com/codasus/django-bootstrap#egg=bootstrap
 
-    or just:
+or just:
 
     pip install django-bootstrap
 
-**Example**
+Example
+-------
 
-urls.py
+**urls.py**
 
 ```python
 ...
@@ -29,11 +33,11 @@ urlpatterns = patterns('',
 )
 ```
 
-contact_list/models.py
+**contact_list/models.py**
 
 _Take a look at `test_app/contact_list/models.py`_
 
-contact_list/forms.py
+**contact_list/forms.py**
 
 ```python
 from django import forms
@@ -44,7 +48,7 @@ class ContactForm(forms.ModelForm):
         model = Contact
 ```
 
-contact_list/urls.py
+**contact_list/urls.py**
 
 ```python
 from bootstrap.urls import bootstrap_patterns
@@ -80,12 +84,13 @@ For example:
                             model=Object))
     ```
 
-**License**
+License
+-------
 
 Django Bootstrap by [Codasus Technologies](http://codasus.com) is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/).
 
 You are free:
 
-* to Share - to copy, distribute and transmit the work
-* to Remix - to adapt the work
-* to make commercial use of the work
+* **to Share** - to copy, distribute and transmit the work
+* **to Remix** - to adapt the work
+* **to make** commercial use of the work
