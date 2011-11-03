@@ -68,21 +68,21 @@ You may also create views separately using `bootstrap.urls` functions:
 
 **For example:**
 
-    ```python
-    urlpatterns = patterns('',
-            bootstrap_list(r'object/$',
-                            'object_list',
-                            view=ObjectListView.as_view()))
-    ```
+```python
+urlpatterns = patterns('',
+        bootstrap_list(r'object/$',
+                        'object_list',
+                        view=ObjectListView.as_view()))
+```
 
     or
 
-    ```python
-    urlpatterns = patterns('',
-            bootstrap_list(r'object/$',
-                            'object_list',
-                            model=Object))
-    ```
+```python
+urlpatterns = patterns('',
+        bootstrap_list(r'object/$',
+                        'object_list',
+                        model=Object))
+```
 
 License
 -------
