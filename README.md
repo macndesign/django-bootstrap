@@ -55,12 +55,15 @@ urlpatterns = bootstrap_patterns(ContactForm)
 
 Well done! Just go to http://localhost:8000/contact
 
-You may also create views separately using `bootstrap.urls.*` functions:
+You may also create views separately using `bootstrap.urls.\*` functions:
 
-*  bootstrap_list(r'object/', name[, view or model])
-*  bootstrap_create(r'object/add', name[, view or model])
-*  bootstrap_update(r'object/update/(?P<pk>\d+)/', name[, view or model])
-*  bootstrap_delete(r'object/delete/(?P<pk>\d+)/', name[, view or model])
+    bootstrap_list(r'object/', name[, view or model])
+
+    bootstrap_create(r'object/add', name[, view or model])
+
+    bootstrap_update(r'object/update/(?P<pk>\d+)/', name[, view or model])
+
+    bootstrap_delete(r'object/delete/(?P<pk>\d+)/', name[, view or model])
 
     ```python
     urlpatterns = patterns('',
