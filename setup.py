@@ -5,13 +5,19 @@ import os
 root = os.path.dirname(os.path.abspath(__file__))
 os.chdir(root)
 
-VERSION = '0.2'
+VERSION = '0.2.1'
 
 # Make data go to the right place.
 # http://groups.google.com/group/comp.lang.python/browse_thread/thread/35ec7b2fed36eaec/2105ee4d9e8042cb
 for scheme in INSTALL_SCHEMES.values():
     scheme['data'] = scheme['purelib']
 
+def gen_data_files(*dirs):
+    results = []
+    for src_dir in dirs:
+        for root,dirs,files in os.walk(src_dir):
+            results.append((root, map(lambda f:root + "/" + f, files)))
+    return results
 
 setup(
     name='django-bootstrap',
@@ -24,6 +30,7 @@ setup(
     license="MIT License",
     platforms=["any"],
     packages=['bootstrap'],
+    data_files=gen_data_files(os.path.join('bootstrap', 'templates')),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Web Environment",
