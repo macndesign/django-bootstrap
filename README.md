@@ -2,6 +2,11 @@
 
 Django class-based views ready to work with Twitter's Bootstrap toolkit, designed to kickstart development of webapps and sites.
 
+**Requirements**
+
+* Django 1.3+
+* Django 1.4+ (If you want to use SessionWizardView)
+
 **Installation**
 
 1. Install through pip (or manually place it on your `PYTHON_PATH`).
