@@ -20,6 +20,11 @@ or just:
 
     pip install django-bootstrap
 
+Configuration
+-------------
+
+Append `bootstrap` to `INSTALLED_APPS` tuple in your project's `settings.py`.
+
 Example
 -------
 
