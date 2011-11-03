@@ -75,7 +75,7 @@ urlpatterns = patterns('',
                         view=ObjectListView.as_view()))
 ```
 
-    or
+or
 
 ```python
 urlpatterns = patterns('',
