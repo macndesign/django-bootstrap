@@ -22,7 +22,7 @@ urlpatterns = patterns('',
 
 contact_list/models.py
 
-    Take a look at `test_app/contact_list/models.py`
+_Take a look at `test_app/contact_list/models.py`_
 
 contact_list/forms.py
 
