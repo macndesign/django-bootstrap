@@ -11,11 +11,11 @@ Django class-based views ready to work with Twitter's Bootstrap toolkit, designe
 
 Install through pip (or manually place it on your `PYTHON_PATH`).
 
-    `pip install git+http://github.com/codasus/django-bootstrap#egg=bootstrap`
+    pip install git+http://github.com/codasus/django-bootstrap#egg=bootstrap
 
     or just:
 
-    `pip install django-bootstrap`
+    pip install django-bootstrap
 
 **Example**
 
@@ -57,13 +57,12 @@ Well done! Just go to http://localhost:8000/contact
 
 You may also create views separately using `bootstrap.urls.\*` functions:
 
-    bootstrap_list(r'object/', name[, view or model])
+<pre>bootstrap_list(r'object/', name[, view or model])</pre>
+<pre>bootstrap_create(r'object/add', name[, view or model])</pre>
+<pre>bootstrap_update(r'object/update/(?P<pk>\d+)/', name[, view or model])</pre>
+<pre>bootstrap_delete(r'object/delete/(?P<pk>\d+)/', name[, view or model])</pre>
 
-    bootstrap_create(r'object/add', name[, view or model])
-
-    bootstrap_update(r'object/update/(?P<pk>\d+)/', name[, view or model])
-
-    bootstrap_delete(r'object/delete/(?P<pk>\d+)/', name[, view or model])
+For example:
 
     ```python
     urlpatterns = patterns('',
