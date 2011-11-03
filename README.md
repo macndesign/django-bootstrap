@@ -55,18 +55,27 @@ urlpatterns = bootstrap_patterns(ContactForm)
 
 Well done! Just go to http://localhost:8000/contact
 
-You may also create views separately using functions below:
+You may also create views separately using `bootstrap.urls.*` functions:
 
-*  `bootstrap_list(r'object/', name[, view or model])`
-*  `bootstrap_create(r'object/add', name[, view or model])`
-*  `bootstrap_update(r'object/update/(?P<pk>\d+)/', name[, view or model])`
-*  `bootstrap_delete(r'object/delete/(?P<pk>\d+)/', name[, view or model])`
+*  bootstrap_list(r'object/', name[, view or model])
+*  bootstrap_create(r'object/add', name[, view or model])
+*  bootstrap_update(r'object/update/(?P<pk>\d+)/', name[, view or model])
+*  bootstrap_delete(r'object/delete/(?P<pk>\d+)/', name[, view or model])
 
     ```python
     urlpatterns = patterns('',
-            bootstrap_list(r'license/$',
-                            'license_list',
-                            view=LicenseListView.as_view()),
+            bootstrap_list(r'object/$',
+                            'object_list',
+                            view=ObjectListView.as_view()))
+    ```
+
+    or
+
+    ```python
+    urlpatterns = patterns('',
+            bootstrap_list(r'object/$',
+                            'object_list',
+                            model=Object))
     ```
 
 **License**
