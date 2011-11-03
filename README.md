@@ -66,7 +66,7 @@ You may also create views separately using `bootstrap.urls` functions:
     bootstrap_update(r'object/update/(?P<pk>\d+)/', name[, view or model])
     bootstrap_delete(r'object/delete/(?P<pk>\d+)/', name[, view or model])
 
-*For example:*
+**For example:**
 
     ```python
     urlpatterns = patterns('',
